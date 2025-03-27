@@ -29,6 +29,14 @@ keymap.set("n", "<leader>$", "<C-w>v", { desc = "Spilt window vertically" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current pane" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Set panes to equal size" }) 
 
+-- tab management
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) 
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) 
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) 
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
+keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) 
+
+
 -- vim tmux navigation
 keymap.set("n", "<leader>h", "<C-h>", { remap=true, desc = "Move to pane on the left of current" })
 keymap.set("n", "<leader>l", "<C-l>", { remap=true, desc = "Move to pane on the right of current" })
@@ -46,3 +54,8 @@ keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Fuzzy f
 keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Fuzzy find recent files"  })
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Find string in cwd"  })
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Find string under cursor in cwd"  })
+
+-- Auto-Session restore
+keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd"  })
+keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for cwd"  })
+
