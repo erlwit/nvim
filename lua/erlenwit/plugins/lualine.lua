@@ -44,6 +44,7 @@ return {
       bg_status_moon = "#2a273f",
       bg_overlay = "#393552",
       rose = "#ea9a97",
+      gold = "#f6c177",
       love = "#eb6f92",
       pine = "#3e8fb0",
       foam = "#9ccfd8",
@@ -102,7 +103,16 @@ return {
         },
         lualine_b = { "branch", "diff" },
         lualine_c = { "filename" },
-        lualine_x = { "diagnostics" },
+        lualine_x = { 
+          {
+            "diagnostics" 
+          },
+          {
+            lazy_status.updates,
+            cond = lazy_status.has_updates,
+            color = { fg = colors.gold },
+          },
+        },
         lualine_y = { 
           {
              "filetype",

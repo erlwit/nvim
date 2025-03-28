@@ -15,4 +15,8 @@ require("lazy").setup("erlenwit.plugins", {
   change_detection = {
     notify = false,
   },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
 })
